@@ -9,6 +9,8 @@ const Button = ({
   gradientDirection,
   gradientColorOne,
   gradientColorTwo,
+  disabled,
+  onClick
 }) => {
   return (
     <div
@@ -35,6 +37,8 @@ const Button = ({
           boxSizing: "border-box",
           fontSize: "medium",
         }}
+        disabled={disabled}
+        onClick={onClick}
         id={"gradient__button"}
       >
         {buttonText}

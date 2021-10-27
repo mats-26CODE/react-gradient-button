@@ -1,10 +1,10 @@
 import './App.css';
-import Button from './component/Button';
+// import Button from './lib/component/Button';
 
 const App = () => {
   return (
     <div>
-      <Button
+      {/* <Button
         buttonText={'Click Me'}
         gradientType={'linear-gradient'}
         gradientDirection={'right'}
@@ -13,7 +13,7 @@ const App = () => {
         buttonWidth={50}
         buttonHeight={40}
         buttonRadius={2}
-      />
+      /> */}
     </div>
   );
 }

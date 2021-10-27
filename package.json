@@ -1,13 +1,25 @@
 {
   "name": "@mats_/react-gradient-button",
+  "description": "A Simple React Gradient Button",
+  "author": "mats_",
+  "keywords": ["react", "component", "button"],
   "version": "0.1.0",
   "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [ "dist", "README.md" ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mats-26CODE/react-gradient-button"
+  },
   "babel": {
     "presets": [
       "@babel/preset-react"
     ]
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -18,10 +30,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/component -d dist --copy-files"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +54,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
-    "@babel/preset-react": "^7.14.5"
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8"
   }
 }
